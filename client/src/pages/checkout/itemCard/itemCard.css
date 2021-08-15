@@ -1,0 +1,12 @@
+.container{
+    margin-top : 200;
+}
+img {
+    min-height: 100%;
+}
+.paper{
+    width : 50%;
+}
+.cart{
+    float: right;
+}

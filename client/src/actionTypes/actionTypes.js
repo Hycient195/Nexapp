@@ -1,0 +1,16 @@
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS'
+export const SIGNUP = 'SIGNUP'
+export const ADD_TO_CART = 'ADD_TO_CART'
+export const LOGIN = 'LOGIN'
+export const AUTHENTICATE = 'AUTHENTICATE'
+export const LOGOUT = 'LOGOUT'
+export const FETCH_USER_CART = 'FETCH_USER_CART'
+export const ADD_NEW_PRODUCT = 'ADD_NEW_PRODUCT'
+export const REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART'
+export const PROCEED_TO_PAYMENT = 'PROCEED_TO_PAYMENT'
+
+
+export const LIKE = 'LIKE'
+export const UPDATE = 'UPDATE'
+export const DELETE = 'DELETE'
+export const CREATE = 'CREATE'

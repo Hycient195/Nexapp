@@ -1,0 +1,13 @@
+.container{
+    margin-top: 160px;
+    /* background-color: red; */
+}
+.delete{
+    float : right;
+    margin :0;
+    padding: 0;
+}
+.loading{
+    padding-top: 150px;
+    margin : 0 auto;
+}
