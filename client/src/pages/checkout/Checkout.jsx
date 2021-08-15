@@ -36,12 +36,12 @@ const Checkout = () => {
         payment_options:"card",
         customer:{
            "email": user.result.email,
-           "phonenumber": user.result.phonenumber,
+           "phonenumber": user.result.phoneNumber,
            "name": `${user.result.firstName} ${user.result.lastName}`
         },
         "customizations":{
            "title":"Processing Payment",
-           "description":"Note that ther is no refunds after payment has been mase",
+           "description":"Note that there is no form of refund, after payments have been made",
            "logo":"https://assets.piedpiper.com/logo.png"
         }
      }

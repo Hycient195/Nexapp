@@ -45,9 +45,7 @@ li a:hover {
     margin : 0;
     /* padding : 0; */
 }
-.box{
-    /* height : 40px; */
-}
+
 .highlighted{
   background-color: palevioletred;
   border-right: 1px solid white;
