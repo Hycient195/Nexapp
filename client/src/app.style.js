@@ -4,7 +4,8 @@ const useStyles = makeStyles({
     appBar : {
         // marginTop : 10,
         // borderRadius : '5px',
-        padding : 8,
+        // padding : 8,
+        // height : 100,
         background : 'linear-gradient(pink, white)'
     },
     body : {

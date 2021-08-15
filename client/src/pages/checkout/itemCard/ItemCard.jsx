@@ -22,6 +22,7 @@ const ItemCard = ({ seller, itemPrice, itemName, itemDetails, itemId, itemImage,
         },50)
     }
 
+
     return ( 
             <Card>
                

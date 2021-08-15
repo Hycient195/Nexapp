@@ -9,6 +9,10 @@ const useStyles = makeStyles({
     },
     pic : {
         // height : 0
+    },
+    loading : {
+        paddingTop : 100,
+        margin : 0
     }
 })
 

@@ -1,4 +1,4 @@
-import { Container, Typography, TextField, Button } from '@material-ui/core'
+import { Container, Typography, TextField, Button, Paper, Grid } from '@material-ui/core'
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { login } from '../../actions/userActions'
@@ -23,32 +23,41 @@ const Login = () => {
     }
 
     return ( 
-        <Container className="container">
-            <form onSubmit={handleSubmit}>
-                <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Email"
-                    required
-                    type="email"
-                    color="secondary"
-                    onChange={(e)=>setEmail(e.target.value)}
-                />
-                <br/> <br/>
-                <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Password"
-                    required
-                    type="password"
-                    color="secondary"
-                    onChange={(e)=>setPassword(e.target.value)}
-                />
-                <br/><br/>
-                <Button variant="outlined" color='secondary' type="submit">Login</Button>
-            </form>
-        
-        </Container>
+        <Grid container className="container">
+
+            <Grid item xs={12} sm={10}  md={8} lg={6} xl={5}>
+               
+                <Paper className="pape">
+                <Typography gutterBottom align='center' variant="h4">Log In</Typography>
+                    <form onSubmit={handleSubmit}>
+                        <TextField
+                            variant="outlined"
+                            fullWidth
+                            label="Email"
+                            required
+                            type="email"
+                            color="secondary"
+                            onChange={(e)=>setEmail(e.target.value)}
+                        />
+                        <br/> <br/>
+                        <TextField
+                            variant="outlined"
+                            fullWidth
+                            label="Password"
+                            required
+                            type="password"
+                            color="secondary"
+                            onChange={(e)=>setPassword(e.target.value)}
+                        />
+                        <br/><br/>
+                        <Button variant="outlined" color='secondary' type="submit">Login</Button>
+                    </form>
+                    <br/>
+                <Typography>Dont have an account?  <a href="/signup">sign up here</a> </Typography>
+                </Paper>
+            </Grid>     
+            
+        </Grid>
      );
 }
  

@@ -1,4 +1,4 @@
-import { FormControl, Container, TextField, Button } from "@material-ui/core"
+import { FormControl, Container, TextField, Button, Grid, Paper, Typography } from "@material-ui/core"
 import useStyles from './Signup.style'
 
 
@@ -38,75 +38,97 @@ const Signup = () =>{
     }
 
     return(
-        <Container className={classes.container}>
+        <Grid container className={classes.container}>
 
-            <div>
-                {JSON.stringify({user})}
-            </div>
+            <Grid item xs={12} sm={10} md={8} lg={6} xl={5}>
+                <Paper className={classes.paper}>
+                    <Typography gutterBottom align='center' variant='h4'>Sign Up</Typography>
+                <form onSubmit={handleSubmit}>
+                    {/* <FormControl> */}
+
+                    <Grid container spacing={2}>
+                        <Grid item xs={6}>
+                        <TextField
+                            variant="outlined"
+                            className="names"
+                            label="First Name"
+                            fullWidth
+                            required
+                            color="secondary"
+                            onChange={(e)=>setFirstName(e.target.value)}
+                        />
+                        </Grid>
+                        
+                        <Grid item xs={6}>
+                            <TextField
+                                variant="outlined"
+                                className="names"
+                                fullWidth
+                                label="Last Name"
+                                required
+                                color="secondary"
+                                onChange={(e)=>setLastName(e.target.value)}
+                            />
+                        </Grid>
+                    </Grid>
+                    <br/>    
+                        
+
+                        <TextField
+                            variant="outlined"
+                            fullWidth
+                            label="Phone Number"
+                            required
+                            type='number'
+                            color="secondary"
+                            onChange={(e)=>setPhoneNumber(e.target.value)}
+                        /> 
+                    <br/><br/>
+                        <TextField
+                            variant="outlined"
+                            fullWidth
+                            label="Email"
+                            required
+                            color="secondary"
+                            onChange={(e)=>setEmail(e.target.value)}
+                        /> 
+                        <br/><br/>
+                        <TextField
+                            variant="outlined"
+                            fullWidth
+                            label="Password"
+                            type='password'
+                            required
+                            color="secondary"
+                            onChange={(e)=>setPassword(e.target.value)}
+                        />
+                        <br/><br/>
+                        <TextField
+                            variant="outlined"
+                            fullWidth
+                            label="Confirm Password"
+                            type='password'
+                            required
+                            color="secondary"
+                            onChange={(e)=>setConfirmPassword(e.target.value)}
+                        />
+                        <br/><br/>
+                    {/* </FormControl> */}
+
+                    <Button className={classes.button} fullWidth variant="contained" color="secondary" type="submit">
+                        Submit
+                    </Button>
+                </form>
+                </Paper>
+            </Grid>
+
+            <Grid item>
+
+            </Grid>
             
-            <form onSubmit={handleSubmit}>
-                {/* <FormControl> */}
-                    <TextField
-                        variant="outlined"
-                        fullWidth
-                        label="First Name"
-                        required
-                        color="secondary"
-                        onChange={(e)=>setFirstName(e.target.value)}
-                    />
-
-                    <TextField
-                        variant="outlined"
-                        fullWidth
-                        label="Last Name"
-                        required
-                        color="secondary"
-                        onChange={(e)=>setLastName(e.target.value)}
-                    />
-
-                     <TextField
-                        variant="outlined"
-                        fullWidth
-                        label="Phone Number"
-                        required
-                        type='number'
-                        color="secondary"
-                        onChange={(e)=>setPhoneNumber(e.target.value)}
-                    /> 
-
-                     <TextField
-                        variant="outlined"
-                        fullWidth
-                        label="Email"
-                        required
-                        color="secondary"
-                        onChange={(e)=>setEmail(e.target.value)}
-                    /> 
-                     <TextField
-                        variant="outlined"
-                        fullWidth
-                        label="Password"
-                        type='password'
-                        required
-                        color="secondary"
-                        onChange={(e)=>setPassword(e.target.value)}
-                    />
-                    <TextField
-                        variant="outlined"
-                        fullWidth
-                        label="Confirm Password"
-                        type='password'
-                        required
-                        color="secondary"
-                        onChange={(e)=>setConfirmPassword(e.target.value)}
-                    />
-                {/* </FormControl> */}
-
-                <Button variant="outlined" color="textPrimary" type="submit">
-                    Submit
-                </Button>
-            </form>
-        </Container>
+            
+            
+        </Grid>
     )
 }
 

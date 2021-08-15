@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     appBar : {
         paddingTop : 5,
         height : 60,
-        background : 'red'
+        background : '#ED3137',
     }, 
     search : {
         marginTop : 0,
@@ -21,15 +21,7 @@ const useStyles = makeStyles({
         textAlign : 'center',
         float : 'center'
     },
-    nav : {
-        marginTop : 90,
-        position: 'absolute',
-        width: "100%",
-        height: 80,
-        left: -1,
-        top: -31,
-        background: 'silver',
-    },
+   
     buttonGroup : {
         marginTop : 100,
         overflowX : 'scroll'
@@ -37,40 +29,21 @@ const useStyles = makeStyles({
     button : {
         fontSize : 9
     },
-    ul : {
-        height : '80%',
-        marginTop : 80,
-
-        // overflowX : 'scroll',
-        // listStyle : 'none',
-        listStyleType: 'none',
-        margin: 0,
-        padding: 0,
-        borderBottom : '1px solid red',
-        borderRadius : 0
-        // bottom : 100
-    },
-    li : {
-        // bottom : 0,
-        height : '100%',
-        display : 'inline',
-        borderBottom : '2px solid red',
-        marginBottom : 0
-    },
-    a : {
-        // display: 'inline',
-        color: 'white',
-        // textAlign: 'center',
-        padding: 70,
-        // background : 'green',
-        textDecoration: 'none',
-    },
+   
     userDetails : {
-        float : 'right'
+        float : 'right',
+        // padding: 10,
+        textAlign : 'center',
+        background : 'pink',
+        borderRadius : 5
+        // borderTopRightRadius : '40%',
+        // borderTopLeftRadius : '40%',
     },
     grid : {
         textAlign : 'center',
-        float : 'center'
+        float : 'center',
+        // background : 'green',
+        // height : 10
     }
 })
 

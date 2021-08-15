@@ -20,7 +20,7 @@ function App() {
 
       <Container maxWidth="lg" className=''>
 
-        <AppBar position="fixed" color="textSecondary" className={classes.appBar}>
+        <AppBar position="absolute" color="textSecondary" className={classes.appBar}>
           {/* <Typography className='' variant="h4" align="left">StoryLyne</Typography>
           <img src="" height="" alt=""/> */}
 

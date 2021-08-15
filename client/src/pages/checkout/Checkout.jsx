@@ -23,6 +23,11 @@ const Checkout = () => {
   
     let sumPrice
 
+    const prices = userCart?.map((items, index)=>(
+            items.itemPrice
+        ))
+        sumPrice = _.sum(prices)
+
     const checkoutRequest = {
         tx_ref: `nexapp${Math.random()}`,
         amount: sumPrice,
@@ -42,15 +47,14 @@ const Checkout = () => {
      }
 
     const handlePayment = () =>{
-        const prices = userCart.map((items, index)=>(
-            items.itemPrice
-        ))
-        sumPrice = _.sum(prices)
-        // console.log(user.result) 
-        dispatch(proceedToPayment(checkoutRequest))   
+        
+        // dispatch(proceedToPayment(checkoutRequest))   
+        alert(JSON.stringify(checkoutRequest))
 
     }
     console.log(userCart)
+
+
 
     return ( 
         <Container className='container'>
@@ -82,7 +86,8 @@ const Checkout = () => {
             ) 
         }
         </Grid>
-        <Button onClick={handlePayment} >Purchase</Button>
+        <br/>
+        <Button color="secondary" variant='contained' onClick={handlePayment} >Purchase</Button>
         </Container>
      );
 }
